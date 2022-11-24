@@ -43,27 +43,6 @@
 	
 	// 사원목록
 	
-	/* 
-	// ORDER BY first_name ? 이렇게는 불가능
-	String sql = "SELECT emp_no empNo, first_name firstName, last_name lastName FROM employees ORDER BY first_name ASC LIMIT ?,?";
-	if(sort.equals("DESC")){
-		sql = "SELECT emp_no empNo, first_name firstName, last_name lastName FROM employees ORDER BY first_name DESC LIMIT ?,?";
-	}
-	
-	PreparedStatement stmt = conn.prepareStatement(sql);
-	stmt.setInt(1, beginRow);
-	stmt.setInt(2, rowPerPage);
-	ResultSet rs = stmt.executeQuery();
-	ArrayList<Employee> list = new ArrayList<Employee>();
-	while(rs.next()) {
-		Employee e = new Employee();
-		e.setEmpNo(rs.getInt("empNo"));
-		e.setFirstName(rs.getString("firstName"));
-		e.setLastName(rs.getString("lastName"));
-		list.add(e);
-	}
-	 */
-	
 	int cnt = 0;
 	int lastPage = 0;
 	String listSql = null;
